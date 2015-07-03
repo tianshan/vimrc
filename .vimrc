@@ -44,13 +44,13 @@ autocmd BufNewFile *.py,*.sh exec ":call SetTitle()"
 func SetTitle()
   if &filetype == 'sh'
     call setline(1, "\#!/bin/bash")
-    call append(line("."), "\# Author:itxx00@gmail.com")
+    "call append(line("."), "\# Author: qutianshan@gmail.com")
     call append(line(".")+1, "")
   elseif &filetype == 'py'
     call setline(1, "\#!/bin/env python")
     call append(line("."), "\#coding:utf-8")
-    call append(line(".")+1, "\#Author:itxx00@gmail.com")
-    call append(line(".")+2, "")
+    "call append(line(".")+1, "\#Author: qutianshan@gmail.com")
+    call append(line(".")+1, "")
   endif
 endfunc 
 ""新建文件后自动定位至文件末尾
